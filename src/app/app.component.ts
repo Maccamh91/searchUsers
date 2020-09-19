@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { User } from './models/user.model';
 import { SearchUserService } from './services/search-users.service';
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -11,18 +13,6 @@ import { SearchUserService } from './services/search-users.service';
 
 
 export class AppComponent {
-  public searchUserSubscription: Subscription;
-  public users: User[];
-
-
-  constructor(
-    private searchUserService: SearchUserService
-  ) { }
-
-  ngOnInit() {
-    this.searchUserSubscription = this.searchUserService.getJSON().subscribe(userList => {
-      this.users = userList;
-    });
-  }
+  
 }
 

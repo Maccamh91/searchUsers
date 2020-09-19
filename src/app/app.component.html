@@ -1,7 +1,14 @@
+<div class="page">
 
+  <mat-toolbar color="primary" fxLayoutAlign="center center">
+    <span >Welcome to GitHub user searcher</span>
+  </mat-toolbar>
 
-<ng-container *ngFor="let user of users">
-  <br>
-  {{user | json}}
-  <br>
-</ng-container>
+  <div>
+
+    <router-outlet></router-outlet>
+
+  </div>
+  
+
+</div>

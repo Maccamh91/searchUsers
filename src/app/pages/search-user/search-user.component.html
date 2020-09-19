@@ -1,0 +1,22 @@
+
+<form [formGroup]="searchForm">
+    <mat-form-field >
+        <mat-label>Search User</mat-label>
+        <input formControlName="searchUserControl" matInput>
+    </mat-form-field>
+</form>
+
+<div fxLayout="row wrap" fxLayoutAlign="space-around center">
+    <ng-container *ngFor="let user of (filteredUsers || users)" >
+      <mat-card [style.width.%]="25" [style.margin-top.px]="25">
+        <div fxLayoutAlign="space-between center">
+          <div>
+            <span>
+              {{user.login}}
+            </span>
+          </div>
+          <img [src]="user?.avatar_url" alt="Avatar" width="150" height="150">
+        </div>
+      </mat-card>
+    </ng-container>
+</div>
