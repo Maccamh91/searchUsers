@@ -1,7 +1,10 @@
-.toolbar {
-    &-left {
-        &-link {
-            color: white;;
+.application {
+    min-height: 101%;
+    .toolbar {
+        &-left {
+            &-link {
+                color: white;;
+            }
         }
     }
 }
