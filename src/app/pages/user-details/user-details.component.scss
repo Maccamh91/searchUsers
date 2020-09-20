@@ -1,23 +1,21 @@
 .page {
     background-color: #fafcff;
+    &-title {
+        padding-top: 10px;
+    }
     &-upper {
         &-left {
-            //width: 50%;
         }
         &-right {
-            //width: 50%;
-            img {
-                padding-top: 10px;
-                padding-bottom: 10px;
-            } 
+            > img {
+                padding-bottom: 10px
+            }
         }
     }
     &-lower {
         &-left {
-            //width: 50%;
         }
         &-right {
-            //width: 50%;
         }
     }
 }

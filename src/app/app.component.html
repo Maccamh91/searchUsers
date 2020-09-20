@@ -1,5 +1,14 @@
-<mat-toolbar color="primary" fxLayoutAlign="center center">
-  <span >Welcome to GitHub user explorer</span>
+<mat-toolbar class="toolbar" color="primary">
+  <div class="toolbar-left" fxFlex="33%" fxFlex.lt-md="50">
+    <a class="toolbar-left-link" [routerLink]="['']">Home</a>
+    <span [fxShow]="actualRoute?.includes('/user-details?login')"> > User details</span>
+  </div>
+  <div fxHide.lt-md fxFlex="34%" fxLayoutAlign="center center">
+    <span>Welcome to GitHub user explorer</span>
+  </div>
+  <div fxFlex="33%" fxFlex.lt-md="50" fxLayoutAlign="end center">
+    <mat-icon>search</mat-icon>
+  </div>
 </mat-toolbar>
 
 <div>

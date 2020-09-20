@@ -17,6 +17,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card'
 import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
 import { SearchUserModule } from './pages/search-user/search-user.module';
 import { UserDetailModule } from './utils/user-detail/user-detail.module';
 
@@ -42,6 +43,7 @@ import { UserDetailModule } from './utils/user-detail/user-detail.module';
     MatInputModule,
     MatFormFieldModule,
     MatCardModule,
+    MatIconModule,
 
     SearchUserModule,
     UserDetailsModule,

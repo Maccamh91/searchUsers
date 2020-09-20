@@ -15,8 +15,4 @@ export class UserDetailComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  ngOnChanges() {
-    console.log(this.user);
-  }
-
 }

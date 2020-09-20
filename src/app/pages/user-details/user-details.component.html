@@ -1,23 +1,31 @@
 <div class="page" fxFlex>
-    <div class="page-upper" fxLayout="row" fxLayout.xs="column">
+    <div class="page-title" fxLayoutAlign="center center">
+        <h1>{{user?.login}}</h1>
+    </div>
+    <div class="page-upper" fxLayout="row" fxLayout.lt-md="column">
         <div class="page-upper-left" fxFlex="50%">
             <user-detail [user]="user"></user-detail>
         </div>
-        <div class="page-upper-right" fxLayoutAlign="center center" fxFlex="50%" fxFlex.xs="100%">
+        <div class="page-upper-right" fxLayoutAlign="center center" fxFlex="50%" fxFlex.lt-md="100%">
             <img [src]="user?.avatar_url" alt="Avatar" width="250px" height="250px">
         </div>
-
     </div>
     <mat-divider></mat-divider>
-    <div class="page-lower" fxLayout="row" fxLayout.xs="column">
-        <div class="page-lower-left" fxFlex="50%" fxFlex.xs="100%">
+    <div class="page-lower" fxLayout="row" fxLayout.lt-md="column">
+        <div class="page-lower-left" fxFlex="50%" fxFlex.lt-md="100%">
+            <div class="page-title" fxLayoutAlign="center center">
+                <h2>Repositories</h2>
+            </div>
             <ng-container *ngFor="let repo of repos">
                 <user-repo [repo]="repo"></user-repo>
                 <mat-divider></mat-divider>
             </ng-container>
         </div>
         <mat-divider [vertical]="true"></mat-divider>
-        <div class="page-lower-right" fxLayout="column wrap" fxLayoutAlign="start center" fxFlex="50%" fxFlex.xs="100%">
+        <div class="page-lower-right" fxLayout="column wrap" fxLayoutAlign="start center" fxFlex="50%" fxFlex.lt-md="100%">
+            <div class="page-title" fxLayoutAlign="center center">
+                <h2>Followers</h2>
+            </div>
             <ng-container *ngFor="let follower of followers">
                 <user-card [user]="follower" (userSelected)="updateUser($event)"></user-card>
             </ng-container>
