@@ -1,3 +1,4 @@
+import { UserRepoModule } from './../../utils/user-repo/user-repo.module';
 import { UserCardModule } from './../../utils/user-card/user-card.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
@@ -8,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { MatDividerModule } from '@angular/material/divider';
 
 
 
@@ -19,11 +21,15 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
     BrowserAnimationsModule,
     HttpClientModule,
     FlexLayoutModule,
+    
     UserCardModule,
+    UserRepoModule,
+
     AppRoutingModule,
 
 
     RouterModule,
+    MatDividerModule,
 
   ],
 })

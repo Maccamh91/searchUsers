@@ -1,0 +1,17 @@
+<div class="container">
+    <mat-nav-list>
+        <div fxLayoutAlign="center center">
+            <h3>{{repo.name}}</h3>
+        </div>   
+        <div>
+            <ul>
+                <li [fxShow]="repo.description">
+                    <span>{{repo.description}}</span>
+                </li>
+                <li [fxShow]="repo.url">
+                    <a [href]="repo.url" target="_blank">{{repo.url}}</a>
+                </li>
+            </ul>
+        </div>
+    </mat-nav-list>
+</div>

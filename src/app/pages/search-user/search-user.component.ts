@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, OnDestroy, OnInit, ChangeDetectorRe
 import { FormControl, FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
-import { User } from 'src/app/models/user.model';
+import { IUser } from 'src/app/models/user.model';
 import { SearchUserService } from 'src/app/services/search-users.service';
 
 @Component({
@@ -15,8 +15,8 @@ export class SearchUserComponent implements OnInit, OnDestroy {
 
   public getUsersListSubscription: Subscription;
   public searchUserSubscription: Subscription;
-  public users: User[];
-  public filteredUsers: User[];
+  public users: IUser[];
+  public filteredUsers: IUser[];
   public searchForm = new FormGroup({
     searchUserControl: new FormControl(''),
   });

@@ -1,3 +1,4 @@
+import { UserRepoModule } from './utils/user-repo/user-repo.module';
 import { UserCardModule } from './utils/user-card/user-card.module';
 import { UserDetailsModule } from './pages/user-details/user-details.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -43,7 +44,8 @@ import { SearchUserModule } from './pages/search-user/search-user.module';
 
     SearchUserModule,
     UserDetailsModule,
-    UserCardModule
+    UserCardModule,
+    UserRepoModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [SearchUserService],

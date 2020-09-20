@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { User } from 'src/app/models/user.model';
+import { IUser } from 'src/app/models/user.model';
 import { Router } from '@angular/router';
 
 
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class UserCardComponent implements OnInit {
 
-  @Input() user: User;
+  @Input() user: IUser;
   @Output() userSelected: EventEmitter<any> = new EventEmitter();
 
 
@@ -21,7 +21,7 @@ export class UserCardComponent implements OnInit {
   }
 
   newFollowers() {
-    this.userSelected.emit(this.user.login);
+    this.userSelected.emit(this.user);
   }
 
 }

@@ -1,0 +1,86 @@
+import { IUser } from './user.model';
+
+export interface IRepo {
+    id: number;
+    node_id: String;
+    name: String;
+    full_name: String;
+    private: boolean;
+    owner: IUser;    
+    html_url: String;
+    description: String;
+    fork: boolean;
+    url: String;
+    forks_url: String;
+    keys_url: String;
+    collaborators_url: String;
+    teams_url: String;
+    hooks_url: String;
+    issue_events_url: String;
+    events_url: String;
+    assignees_url: String;
+    branches_url: String;
+    tags_url: String;
+    blobs_url: String;
+    git_tags_url: String;
+    git_refs_url: String;
+    trees_url: String;
+    statuses_url: String;
+    languages_url: String;
+    stargazers_url: String;
+    contributors_url: String;
+    subscribers_url: String;
+    subscription_url: String;
+    commits_url: String;
+    git_commits_url: String;
+    comments_url: String;
+    issue_comment_url: String;
+    contents_url: String;
+    compare_url: String;
+    merges_url: String;
+    archive_url: String;
+    downloads_url: String;
+    issues_url: String;
+    pulls_url: String;
+    milestones_url: String;
+    notifications_url: String;
+    labels_url: String;
+    releases_url: String;
+    deployments_url: String;
+    created_at: Date;
+    updated_at: Date;
+    pushed_at: Date;
+    git_url: String;
+    ssh_url: String;
+    clone_url: String;
+    svn_url: String;
+    homepage?: String;
+    size: number;
+    stargazers_count: number;
+    watchers_count: number;
+    language: String;
+    has_issues: boolean;
+    has_projects: boolean;
+    has_downloads: boolean;
+    has_wiki: boolean;
+    has_pages: boolean;
+    forks_count: number;
+    mirror_ur?: String;
+    archived: boolean;
+    disabled: boolean;
+    open_issues_count: number;
+    license: ILicence;
+    forks: number;
+    open_issues: number;
+    watchers: number;
+    default_branch: String;
+}
+
+
+export interface ILicence {
+    key: String;
+    name: String;
+    spdx_id: String;
+    url: String;
+    node_id: String;
+}
