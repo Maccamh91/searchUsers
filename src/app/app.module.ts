@@ -18,6 +18,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card'
 import { MatInputModule } from '@angular/material/input';
 import { SearchUserModule } from './pages/search-user/search-user.module';
+import { UserDetailModule } from './utils/user-detail/user-detail.module';
 
 
 
@@ -45,7 +46,8 @@ import { SearchUserModule } from './pages/search-user/search-user.module';
     SearchUserModule,
     UserDetailsModule,
     UserCardModule,
-    UserRepoModule
+    UserRepoModule,
+    UserDetailModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [SearchUserService],

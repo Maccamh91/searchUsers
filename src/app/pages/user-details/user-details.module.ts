@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { MatDividerModule } from '@angular/material/divider';
+import { UserDetailModule } from 'src/app/utils/user-detail/user-detail.module';
 
 
 
@@ -24,6 +25,7 @@ import { MatDividerModule } from '@angular/material/divider';
     
     UserCardModule,
     UserRepoModule,
+    UserDetailModule,
 
     AppRoutingModule,
 

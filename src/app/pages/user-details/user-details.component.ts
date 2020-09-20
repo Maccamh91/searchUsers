@@ -32,29 +32,34 @@ export class UserDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.username = this.activatedRoute?.snapshot?.queryParams['login'];
-    this.usersListSubscription = this.searchUserService.getUserDetail(this.username).subscribe( user => {
+    this.updateUser(this.username);
+  }
+
+  updateUser(username: String) {
+    this.getUserDetails(username);
+    this.getFollowers(username);
+    this.getRepos(username);
+  }
+
+  getUserDetails(username: String) {
+    this.usersListSubscription && this.usersListSubscription.unsubscribe();
+    this.usersListSubscription = this.searchUserService.getUserDetail(username).subscribe( user => {
       this.user = user;
-      this.updateUser(this.user);
+      this.changeDetectorRef.markForCheck();
     }) 
   }
 
-  updateUser(user: IUser) {
-    this.user = user;
-    this.getFollowers(user);
-    this.getRepos(user);
-  }
-
-  getFollowers(user: IUser) {
+  getFollowers(username: String) {
     this.followerListSubscription && this.followerListSubscription.unsubscribe();
-    this.followerListSubscription = this.searchUserService.getAllFollowers(user.login).subscribe(followerList => {
+    this.followerListSubscription = this.searchUserService.getAllFollowers(username).subscribe(followerList => {
       this.followers = followerList;
       this.changeDetectorRef.markForCheck();
     });
   }
 
-  getRepos(user: IUser) {
+  getRepos(username: String) {
     this.reposListSubscription && this.reposListSubscription.unsubscribe();
-    this.reposListSubscription = this.searchUserService.getAllRepo(user.login).subscribe(repos => {
+    this.reposListSubscription = this.searchUserService.getAllRepo(username).subscribe(repos => {
       this.repos = repos;
       this.changeDetectorRef.markForCheck();
     });

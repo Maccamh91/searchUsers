@@ -1,0 +1,24 @@
+<div class="container" *ngIf="user">
+    <div class="container-title" fxLayoutAlign="center center">
+        <h1>{{user.login}}</h1>
+    </div>
+    <div class="container-data">
+        <ul fxLayout="column wrap" fxLayoutAlign="center start" [style.width.%]="100">
+            <li [fxShow]="!!user.name">Name: {{user.name}}</li>
+            <li [fxShow]="!!user.location">Location: {{user.location}}</li>
+            <li [fxShow]="!!user.type">User type: {{user.type}}</li>
+            <li [fxShow]="!!user.email">Bio: {{user.email}}</li>
+            <li [fxShow]="!!user.company">Company: {{user.company}}</li>
+            <li [fxShow]="!!user.bio">Email: {{user.bio}}</li>
+            <li [fxShow]="!!user.public_repos">Public repos: {{user.public_repos}}</li>
+            <li [fxShow]="!!user.public_gists">Public gists: {{user.public_gists}}</li>
+            <li [fxShow]="!!user.blog">Blog: {{user.blog}}</li>
+            <li [fxShow]="!!user.hireable">Blog: {{user.hireable}}</li>
+            <li [fxShow]="!!user.twitter_username">Twitter username: {{user.twitter_username}}</li>
+            <li [fxShow]="!!user.followers">Followers: {{user.followers}}</li>
+            <li [fxShow]="!!user.following">Following: {{user.following}}</li>
+            <li [fxShow]="!!user.created_at">Created at: {{user.created_at | date:'dd/MM/yyyy'}}</li>
+            <li [fxShow]="!!user.updated_at">Updated at: {{user.updated_at | date:'dd/MM/yyyy'}}</li>
+        </ul>
+    </div>
+</div>

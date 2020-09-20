@@ -14,7 +14,6 @@ export class UserRepoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.repo);
   }
 
 }

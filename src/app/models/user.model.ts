@@ -16,5 +16,10 @@ export interface IUser {
     events_url: string,
     received_events_url: string,
     type: string,
-    site_admin: boolean
+    site_admin: boolean,
+    email?: String,
+    location?: String,
+    blog?: String,
+    twitter_username?: String,
+    bio: String
 }

@@ -21,7 +21,7 @@ export class UserCardComponent implements OnInit {
   }
 
   newFollowers() {
-    this.userSelected.emit(this.user);
+    this.userSelected.emit(this.user.login);
   }
 
 }

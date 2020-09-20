@@ -1,24 +1,23 @@
 <div class="page" fxFlex>
     <div class="page-upper" fxLayout="row" fxLayout.xs="column">
         <div class="page-upper-left" fxFlex="50%">
+            <user-detail [user]="user"></user-detail>
         </div>
-        <mat-divider [vertical]="true"></mat-divider>
-
-        <div class="page-upper-right" fxLayoutAlign="center center" fxFlex="50%">
-            <img [src]="user?.avatar_url" alt="Avatar" width="300px" height="300px">
+        <div class="page-upper-right" fxLayoutAlign="center center" fxFlex="50%" fxFlex.xs="100%">
+            <img [src]="user?.avatar_url" alt="Avatar" width="250px" height="250px">
         </div>
 
     </div>
     <mat-divider></mat-divider>
     <div class="page-lower" fxLayout="row" fxLayout.xs="column">
-        <div class="page-lower-left" fxFlex="50%">
+        <div class="page-lower-left" fxFlex="50%" fxFlex.xs="100%">
             <ng-container *ngFor="let repo of repos">
                 <user-repo [repo]="repo"></user-repo>
                 <mat-divider></mat-divider>
             </ng-container>
         </div>
         <mat-divider [vertical]="true"></mat-divider>
-        <div class="page-lower-right" fxLayout="column wrap" fxLayoutAlign="start center" fxFlex="50%">
+        <div class="page-lower-right" fxLayout="column wrap" fxLayoutAlign="start center" fxFlex="50%" fxFlex.xs="100%">
             <ng-container *ngFor="let follower of followers">
                 <user-card [user]="follower" (userSelected)="updateUser($event)"></user-card>
             </ng-container>
