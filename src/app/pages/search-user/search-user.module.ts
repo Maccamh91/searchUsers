@@ -1,3 +1,5 @@
+import { UserCardModule } from './../../utils/user-card/user-card.module';
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchUserComponent } from './search-user.component';
@@ -14,24 +16,24 @@ import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [SearchUserComponent],
-  entryComponents: [SearchUserComponent],
   imports: [
     CommonModule,
 
-    BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
+
+    RouterModule,
+
     
     FormsModule,
     ReactiveFormsModule,
     
-    MatToolbarModule,
     MatInputModule,
     MatFormFieldModule,
     MatCardModule,
+    UserCardModule
 
   ],
-  exports: [SearchUserComponent]
 })
 export class SearchUserModule { }

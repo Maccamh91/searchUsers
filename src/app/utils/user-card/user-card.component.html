@@ -1,0 +1,10 @@
+<mat-card [style.width.px]="300" [style.height.px]="180" [style.margin.px]="25">
+    <div [style.width.%]="100" [style.height.%]="100" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between center">
+        <div>
+            <a [routerLink]="['/user-details'] " [queryParams]="{ login: user.login}" (click)="newFollowers()">
+                {{user.login}}
+            </a>
+        </div>
+        <img [src]="user?.avatar_url" alt="Avatar" width="150px" height="150px">
+    </div>
+</mat-card>

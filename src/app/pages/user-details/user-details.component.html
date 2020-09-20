@@ -1,1 +1,17 @@
-<p>user-details works!</p>
+<div class="page" fxFlex>
+    <div class="page-upper">
+        ciajabjdkshdas
+
+    </div>
+    <div class="page-lower" fxLayout="row wrap" fxLayoutAlign="space-around center">
+        <div class="page-lower-left">
+            fff
+        </div>
+        <div class="page-lower-right" fxLayoutALign="space-around center">
+            <ng-container *ngFor="let follower of followers">
+                <user-card [user]="follower" (userSelected)="getNewFollowers($event)"></user-card>
+            </ng-container>
+        </div>
+
+    </div>
+</div>

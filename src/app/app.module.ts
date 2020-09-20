@@ -1,3 +1,6 @@
+import { UserCardModule } from './utils/user-card/user-card.module';
+import { UserDetailsModule } from './pages/user-details/user-details.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { SearchUserService } from './services/search-users.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -9,7 +12,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card'
@@ -39,7 +41,9 @@ import { SearchUserModule } from './pages/search-user/search-user.module';
     MatFormFieldModule,
     MatCardModule,
 
-    SearchUserModule
+    SearchUserModule,
+    UserDetailsModule,
+    UserCardModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [SearchUserService],
