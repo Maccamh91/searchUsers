@@ -22,17 +22,14 @@ import { UserDetailModule } from 'src/app/utils/user-detail/user-detail.module';
     BrowserAnimationsModule,
     HttpClientModule,
     FlexLayoutModule,
+    AppRoutingModule,
+    RouterModule,
+
+    MatDividerModule,
     
     UserCardModule,
     UserRepoModule,
     UserDetailModule,
-
-    AppRoutingModule,
-
-
-    RouterModule,
-    MatDividerModule,
-
   ],
 })
 export class UserDetailsModule { }

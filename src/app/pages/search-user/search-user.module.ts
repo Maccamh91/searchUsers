@@ -18,22 +18,18 @@ import { MatCardModule } from '@angular/material/card';
   declarations: [SearchUserComponent],
   imports: [
     CommonModule,
-
     HttpClientModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-
     RouterModule,
-
-    
     FormsModule,
     ReactiveFormsModule,
     
     MatInputModule,
     MatFormFieldModule,
+    
     MatCardModule,
     UserCardModule
-
   ],
 })
 export class SearchUserModule { }

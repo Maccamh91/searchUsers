@@ -6,8 +6,6 @@ import { UserRepoComponent } from './user-repo.component';
 import { MatListModule } from '@angular/material/list';
 
 
-
-
 @NgModule({
   declarations: [UserRepoComponent],
   imports: [
@@ -15,7 +13,6 @@ import { MatListModule } from '@angular/material/list';
     BrowserModule,
     MatListModule,
     FlexLayoutModule
-
   ],
   exports: [UserRepoComponent]
 })

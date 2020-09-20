@@ -1,5 +1,5 @@
 import { IRepo } from './../../models/repo.module';
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'user-repo',
@@ -7,13 +7,8 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
   styleUrls: ['./user-repo.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class UserRepoComponent implements OnInit {
+export class UserRepoComponent {
 
   @Input() repo: IRepo;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

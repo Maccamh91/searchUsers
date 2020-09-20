@@ -4,18 +4,12 @@
         padding-top: 10px;
     }
     &-upper {
-        &-left {
-        }
         &-right {
             > img {
-                padding-bottom: 10px
+                padding-bottom: 10px;
+                width: 250px;
+                height: 250px;
             }
-        }
-    }
-    &-lower {
-        &-left {
-        }
-        &-right {
         }
     }
 }

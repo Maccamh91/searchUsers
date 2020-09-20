@@ -40,9 +40,6 @@ import { UserDetailModule } from './utils/user-detail/user-detail.module';
     ReactiveFormsModule,
     
     MatToolbarModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatCardModule,
     MatIconModule,
 
     SearchUserModule,
